@@ -26,6 +26,12 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-116928082-1');
+      function sendClick() {
+          gtag('event', 'click', {
+          'event_category': 'Click on Download Button'
+        });
+        console.log('sent event to google');
+      }
     </script>
   </head>
 
@@ -129,8 +135,8 @@
               <a name="promo"></a>
             <div name="promo" style="border: solid darkblue;padding: 100px;margin: 100px;border-radius: 25px;background-image: url('img/people.jpg');">
               <h3>Vem com a gente!</h3>
-              <p>Cadastre-se e tenha 20% de desconto em seu primeiro Happy Day! &nbsp;&nbsp;&nbsp;<input type="text"><br><a href="#promo" class="btn btn-primary btn-xl rounded-pill mt-5">Enviar</a></p>
-                
+              <p>Cadastre-se e tenha 20% de desconto em seu primeiro Happy Day! &nbsp;&nbsp;&nbsp;<input type="text"></p>
+                <a href="#promo" class="btn btn-primary btn-xl rounded-pill mt-5" onclick="sendClick()">Enviar</a>
               <div>
               </div>
             </div>
