@@ -1,11 +1,14 @@
 module.exports = {
   'Sample functional test' : function (browser) {
     browser
-      .url('http://google.com')
-      .waitForElementVisible('input.gsfi', 60000, true,
-        function(){}, 'Waiting for Search Input to become visible')
-      .setValue('input.gsfi', ['functional tests', browser.Keys.ENTER])
-      .waitForElementPresent('#searchform', 60000)
+      .url('http://lab-activation-happyday.mybluemix.net/')
+      .waitForElementVisible('#inputemail', 60000, true,
+        function(){}, 'Waiting for Go To Campaign Button')
+      .click()
+      .waitForElementPresent('#inputemail', 60000)
+      .setValue('#inputemail', ['test@test.com', browser.Keys.ENTER])
+      .waitForElementPresent('#registeremail', 60000)
+      .click()
       .pause(5000)
       .end();
   }
