@@ -1,7 +1,7 @@
 module.exports = {
   'Sample functional test' : function (browser) {
     browser
-      .url('http://lab-activation-happyday.mybluemix.net/')
+      .url('http://lab-activation-happyday-staging.mybluemix.net/')
       .waitForElementVisible('#gotocampaign', 60000, true,
         function(){}, 'Waiting for Go To Campaign Button')
       .click('#gotocampaign')
